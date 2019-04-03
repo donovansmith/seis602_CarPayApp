@@ -14,6 +14,7 @@ public class Main extends Application {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("mainTheme.fxml"));
 			Scene scene = new Scene(root,800,745);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Car Payment Calculator");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
