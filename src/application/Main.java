@@ -16,7 +16,11 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Car Payment Calculator");
 			primaryStage.setScene(scene);
+		    primaryStage.setWidth(800);
+		    primaryStage.setHeight(745);
+			primaryStage.setResizable(false);
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
