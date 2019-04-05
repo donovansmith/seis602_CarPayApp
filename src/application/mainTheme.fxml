@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="745.0" maxWidth="800.0" minHeight="745.0" minWidth="800.0" prefHeight="745.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="745.0" maxWidth="800.0" minHeight="745.0" minWidth="800.0" prefHeight="745.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainController">
    <children>
       <Pane prefHeight="745.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Button layoutX="510.0" layoutY="517.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: #40AD87; -fx-text-fill: #ffffff;" text="See your car's value">
+            <Button fx:id="carValueButton" layoutX="510.0" layoutY="517.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: #40AD87; -fx-text-fill: #ffffff;" text="See your car's value">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -27,11 +27,11 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="47.0" layoutY="288.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="carPriceTF" layoutX="47.0" layoutY="288.0" prefHeight="35.0" prefWidth="329.0">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
-            <ChoiceBox layoutX="51.0" layoutY="141.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbaba;" />
+            <ChoiceBox fx:id="creditScoreCB" layoutX="51.0" layoutY="141.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbaba;" />
             <Text layoutX="33.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800; -fx-font-size: 36;" text="Car payment calculator">
                <font>
                   <Font name="Arial Bold" size="36.0" />
@@ -48,14 +48,14 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <Text layoutX="50.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Based on your score, the average rate is">
+            <Text fx:id="creditComment1TF" layoutX="47.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Text layoutX="50.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or">
+            <Text fx:id="creditComment2TF" layoutX="47.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
                <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="Arial" size="12.0" />
                </font>
             </Text>
             <Text fill="#bcbaba" layoutX="50.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After negotiations">
@@ -73,7 +73,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="47.0" layoutY="386.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="tradeInPaymentTF" layoutX="47.0" layoutY="386.0" prefHeight="35.0" prefWidth="329.0">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -87,7 +87,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="47.0" layoutY="486.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="intRateTF" layoutX="47.0" layoutY="486.0" prefHeight="35.0" prefWidth="329.0">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -101,7 +101,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="47.0" layoutY="583.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="noMonthsTF" layoutX="47.0" layoutY="583.0" prefHeight="35.0" prefWidth="329.0">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -121,12 +121,12 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <TextField editable="false" layoutX="412.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
+            <TextField fx:id="moPaymentTF" editable="false" layoutX="413.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </TextField>
-            <TextField editable="false" layoutX="412.0" layoutY="265.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
+            <TextField fx:id="totalPaidTF" editable="false" layoutX="413.0" layoutY="265.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -136,12 +136,12 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <Text layoutX="423.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly payment">
+            <Text layoutX="423.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total amount paid">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField editable="false" layoutX="412.0" layoutY="355.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2F79C5;" text="\$">
+            <TextField fx:id="intPaidTF" editable="false" layoutX="413.0" layoutY="355.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2F79C5;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -151,16 +151,9 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField editable="false" layoutX="303.0" layoutY="202.0" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: #ffffff;" />
-            <TextField editable="false" layoutX="62.0" layoutY="222.0" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: #ffffff;" />
-            <Text layoutX="100.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(used).">
+            <Text fx:id="creditComment3TF" layoutX="47.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
                <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Text>
-            <Text layoutX="340.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(new)">
-               <font>
-                  <Font name="Arial" size="14.0" />
+                  <Font name="Arial" size="12.0" />
                </font>
             </Text>
          </children>
