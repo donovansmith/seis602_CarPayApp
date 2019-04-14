@@ -40,6 +40,9 @@ public class mainController {
 	//Main Button
 	@FXML
 	private Button carValueButton;
+
+	//Payment class declaration
+	private Payment payment = new Payment();
 	
 	@FXML
 	public void initialize() {
@@ -87,12 +90,7 @@ public class mainController {
 			}
 			
 			//determine total paid
-			if (intRate !=0) {
-				totalPaid = monthlyPay*noMonths;
-			}
-			else {
-				totalPaid = principal;
-			}
+			totalPaid = payment.determineTotaslPaid(intRate, monthlyPay, noMonths, principal);
 			
 			//determine interest paid
 			intPaid = totalPaid - principal;
