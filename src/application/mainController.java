@@ -98,8 +98,8 @@ public class mainController {
 		carValueButton.setOnAction((event) -> {
 			//Reset to defaults
 			boolean proceedCalculation = true;
-
-		    initialize();
+			//reset
+			creditComment1TF.setText("");
 		    
 		    //Input Validate Car Price
 			try {
