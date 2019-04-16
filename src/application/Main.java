@@ -28,5 +28,16 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+		CarApp car = new CarApp();
+		car.setCarPrice(20000.00);
+		car.setDownPayment(4000.00);
+		car.setInterestRate(.045);
+		car.setNumMonth(36);
+		car.MonthlyPayment();
+		System.out.println(car.getMonthlyPayment());
+		car.TotalPayment();
+		car.TotalInterest();
+		System.out.println(car.getTotalPay());
+		System.out.println(car.getTotalInt());
 	}
 }
