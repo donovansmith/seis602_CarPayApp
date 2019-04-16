@@ -31,14 +31,14 @@
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
-            <ChoiceBox fx:id="creditScoreCB" layoutX="51.0" layoutY="141.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbaba;" />
+            <ChoiceBox fx:id="creditScoreCB" layoutX="47.0" layoutY="141.0" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #ffffff; -fx-border-color: #bbbaba;" />
             <Text layoutX="33.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 800; -fx-font-size: 36;" text="Car payment calculator">
                <font>
                   <Font name="Arial Bold" size="36.0" />
                </font>
             </Text>
             <Line endX="640.0" layoutX="134.0" layoutY="92.0" startX="-100.0" stroke="#616161" strokeWidth="0.2" />
-            <Text layoutX="51.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What's your credit score?">
+            <Text layoutX="47.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What's your credit score?">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
