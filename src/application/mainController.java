@@ -155,6 +155,12 @@ public class mainController {
 				 proceedCalculation = false;
 			}
 			
+			//Car Price must be greater than to trade in payment
+			 if (Integer.parseInt(tradeInPaymentTF.getText()) >=  Integer.parseInt(carPriceTF.getText())) {
+				 creditComment1TF.setText("Car Price must be greater than trade in payment");
+				 proceedCalculation = false;
+			 }	
+			
 			//Main Calculation
 			if (proceedCalculation) {			
 				this.CarAppObj=new CarApp(

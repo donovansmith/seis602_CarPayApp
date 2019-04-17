@@ -121,12 +121,12 @@
                   <Font name="Arial Bold" size="12.0" />
                </font>
             </Text>
-            <TextField fx:id="moPaymentTF" editable="false" layoutX="413.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
+            <TextField fx:id="moPaymentTF" editable="false" layoutX="413.0" layoutY="185.0" prefHeight="33.0" prefWidth="366.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="totalPaidTF" editable="false" layoutX="413.0" layoutY="265.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
+            <TextField fx:id="totalPaidTF" editable="false" layoutX="413.0" layoutY="265.0" prefHeight="33.0" prefWidth="366.0" style="-fx-background-color: #ffffff; -fx-text-fill: #005FB9;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
@@ -141,7 +141,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="intPaidTF" editable="false" layoutX="413.0" layoutY="355.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2F79C5;" text="\$">
+            <TextField fx:id="intPaidTF" editable="false" layoutX="413.0" layoutY="355.0" prefHeight="33.0" prefWidth="366.0" style="-fx-background-color: #ffffff; -fx-text-fill: #2F79C5;" text="\$">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>

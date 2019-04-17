@@ -29,26 +29,24 @@ public class CarApp {
 	//Victor
 	public double moPay() {
 		double moPayment = 0.0;
-		double remainingBalance=principal;
+		double remainingBalance=principal; //fake value, would keep track of Principal-PaymentsMade
 		
-		if (interestRateAPR != 0) {
+		if (interestRateAPR != 0) { //if the interest rate is not zero, run standard monthly payment function
 			moPayment = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
 		}
-		else if (principal%numMonth != 0){
+		else if (principal%numMonth != 0){ //if remainder is not zero, round up payment to next cent
 			moPayment = principal/numMonth+.005;
-			if (moPayment > remainingBalance)
+			if (moPayment > remainingBalance) //if remainingBalance is less then moPayment, pay off remainingBalance
 				moPayment = remainingBalance;
 		}
 		else {
-			moPayment = principal/numMonth;
+			moPayment = principal/numMonth; //if remainder is zero, divide principal by number of months
 		}
-		
-		
 		return moPayment;
 	}
 	
 	//Isha
-    public double totalPaid(){
+    public double totalPaid(){ //Total Paid doesn't take into effect trade in value
         double totalPaid = 0.0;
         if (interestRateAPR !=0) {
             totalPaid = moPayment*numMonth;
