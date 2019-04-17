@@ -38,6 +38,7 @@ public class CarApp {
 				moPayment = remainingBalance;
 		}
 		else if (principal%numMonth != 0){
+			moPayment = principal/numMonth;
 			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
 			if (moPayment > remainingBalance)
 				moPayment = remainingBalance;
