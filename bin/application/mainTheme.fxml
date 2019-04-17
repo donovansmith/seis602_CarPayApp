@@ -27,7 +27,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="carPriceTF" layoutX="47.0" layoutY="288.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="carPriceTF" layoutX="47.0" layoutY="288.0" prefHeight="35.0" prefWidth="329.0" text="20000">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -53,7 +53,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </Text>
-            <Text fx:id="creditComment2TF" layoutX="47.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
+            <Text fx:id="carPriceCommentTF" fill="RED" layoutX="47.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
@@ -73,7 +73,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="tradeInPaymentTF" layoutX="47.0" layoutY="386.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="tradeInPaymentTF" layoutX="47.0" layoutY="386.0" prefHeight="35.0" prefWidth="329.0" text="4000">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -87,7 +87,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="intRateTF" layoutX="47.0" layoutY="486.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="intRateTF" layoutX="47.0" layoutY="486.0" prefHeight="35.0" prefWidth="329.0" text="4.5">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -101,7 +101,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <TextField fx:id="noMonthsTF" layoutX="47.0" layoutY="583.0" prefHeight="35.0" prefWidth="329.0">
+            <TextField fx:id="noMonthsTF" layoutX="47.0" layoutY="583.0" prefHeight="35.0" prefWidth="329.0" text="36">
                <font>
                   <Font name="Arial" size="14.0" />
                </font></TextField>
@@ -151,7 +151,17 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Text>
-            <Text fx:id="creditComment3TF" layoutX="47.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
+            <Text fx:id="tradeInCommentTF" fill="RED" layoutX="47.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="interestRateCommentTF" fill="RED" layoutX="47.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="numMonthsCommentTF" fill="RED" layoutX="47.0" layoutY="649.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
