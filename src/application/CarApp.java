@@ -27,6 +27,7 @@ public class CarApp {
 	}
 		
 	//Victor
+	//Calculate Monthly Payments
 	public double moPay() {
 		double moPayment = 0.0;
 		double remainingBalance=principal;
@@ -38,6 +39,7 @@ public class CarApp {
 				moPayment = remainingBalance;
 		}
 		else if (principal%numMonth != 0){
+			moPayment = principal/numMonth;
 			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
 			if (moPayment > remainingBalance)
 				moPayment = remainingBalance;
@@ -50,6 +52,7 @@ public class CarApp {
 	}
 	
 	//Isha
+	//Calculate Total Paid
     public double totalPaid(){ //Total Paid doesn't take into effect trade in value
         double totalPaid = 0.0;
         if (interestRateAPR !=0) {
@@ -63,6 +66,7 @@ public class CarApp {
     }
     
     //Dan
+    //Calculate Total Interest
     public double totalInterest() {
     		return this.totalPaid - this.principal;
     }

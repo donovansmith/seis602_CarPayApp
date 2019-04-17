@@ -76,6 +76,9 @@ public class mainController {
 		} catch (URISyntaxException e1) {
 			e1.printStackTrace();
 		}
+		
+		//Run First Time
+		runCarApp();
 
 		//Choicebox Values
 		ObservableList<String> creditScoreOptions = FXCollections.observableArrayList(
@@ -120,6 +123,7 @@ public class mainController {
 		//Car Price
 		carPriceTF.textProperty().addListener((observable, oldValue, newValue) -> {
 			carPriceCommentTF.setText("");
+			tradeInCommentTF.setText("");
 			try {
 				int carPrice = Integer.parseInt(carPriceTF.getText());
 				if (carPrice<0) {
@@ -144,6 +148,7 @@ public class mainController {
 		//TradeInPayment
 		tradeInPaymentTF.textProperty().addListener((observable, oldValue, newValue) -> {
 			tradeInCommentTF.setText("");
+			carPriceCommentTF.setText("");
 			try {
 				int tradeInPayment = Integer.parseInt(tradeInPaymentTF.getText());
 				if (tradeInPayment<0) {
@@ -213,12 +218,12 @@ public class mainController {
 			try {
 				java.awt.Desktop.getDesktop().browse(CarValueURI);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		});
 	}	
 
+	//Actually Runs Car App
 	public void runCarApp() {
 		if (proceedCalculation) {			
 			this.CarAppObj=new CarApp(
