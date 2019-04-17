@@ -58,7 +58,7 @@ public class CarApp {
             totalPaid = tempPayment*numMonth;
         }
         else {
-            totalPaid = carPrice;
+            totalPaid = principal;
         }
         
         return totalPaid;
