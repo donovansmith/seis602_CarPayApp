@@ -126,7 +126,6 @@ public class mainController {
 				creditComment1TF.setText("There is a problem with Trade-in payment. Please make sure this is a positive integer.");
 				 proceedCalculation = false;
 			}
-			
 			//Input Validate Int Rate
 			try {
 				 double intRate = Double.parseDouble(intRateTF.getText());
@@ -139,7 +138,6 @@ public class mainController {
 				creditComment1TF.setText("There is a problem with interest rate. Please make sure this is a positive number greater than or equal to 0.");
 				 proceedCalculation = false;
 			}
-			
 			//Input Validate No Months
 			try {
 				 int noMonths = Integer.parseInt(noMonthsTF.getText());

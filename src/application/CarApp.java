@@ -29,40 +29,43 @@ public class CarApp {
 	//Victor
 	public double moPay() {
 		double moPayment = 0.0;
-		double remainingBalance=principal; //fake value, would keep track of Principal-PaymentsMade
+		double remainingBalance=principal;
 		
-		if (principal <= 0) { //if you don't owe any money, you don't owe any money.
-			moPayment = 0;
-		}
-		else if (interestRateAPR != 0) { //if the interest rate is not zero, run standard monthly payment function
+		if (interestRateAPR != 0) {
 			moPayment = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
+			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
+			if (moPayment > remainingBalance)
+				moPayment = remainingBalance;
 		}
-		else if (principal%numMonth != 0){ //if remainder is not zero, round up payment to next cent
-			moPayment = principal/numMonth+.005;
-			if (moPayment > remainingBalance) //if remainingBalance is less then moPayment, pay off remainingBalance
+		else if (principal%numMonth != 0){
+			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
+			if (moPayment > remainingBalance)
 				moPayment = remainingBalance;
 		}
 		else {
-			moPayment = principal/numMonth; //if remainder is zero, divide principal by number of months
+			moPayment = principal/numMonth;
 		}
+		
+		
 		return moPayment;
 	}
 	
 	//Isha
-    public double totalPaid(){ //Total Paid doesn't take into effect trade in value
+    public double totalPaid(){
         double totalPaid = 0.0;
         if (interestRateAPR !=0) {
-            totalPaid = moPayment*numMonth; //set to principal (safer)
+        	double tempPayment = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
+            totalPaid = tempPayment*numMonth;
         }
         else {
-            totalPaid = carPrice; //set to moPayment*numMonth
+            totalPaid = carPrice;
         }
         
         return totalPaid;
     }
     
     //Dan
-    public double totalInterest() { //Total Interest doesn't take into effect trade in value
+    public double totalInterest() {
     		return this.totalPaid - this.principal;
     }
     
