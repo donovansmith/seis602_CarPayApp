@@ -6,8 +6,10 @@
 package application;
 
 import java.io.IOException;
+
 import java.net.URI;
 import java.net.URISyntaxException;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -233,11 +235,11 @@ public class mainController {
 					Integer.parseInt(noMonthsTF.getText())
 					);
 			moPaymentTF.setText(currencyFormat.format(CarAppObj.getMoPayment()));
-			System.out.println(CarAppObj.getMoPayment());
 			totalPaidTF.setText(currencyFormat.format(CarAppObj.getTotalPaid()));
 			intPaidTF.setText(currencyFormat.format(CarAppObj.getTotalIntPaid()));
+			
 			if (CarAppObj.getRemainingBalance() != 0.0) {
-				moPaymentTF.setText(moPaymentTF.getText() + " one payment " + CarAppObj.getRemainingBalance()); 
+				moPaymentTF.setText(moPaymentTF.getText() + " & one payment of $" + CarAppObj.getRemainingBalance()); 
 			}
 		}	
 	}

@@ -53,8 +53,8 @@ public class CarApp {
     public double totalPaid(){ //Total Paid doesn't take into effect trade in value
         double totalPaid = 0.0;
         if (interestRateAPR !=0) {
-        	totalPaid = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
-        	totalPaid = Math.round((moPayment+.005)*100.0)/100.0;
+        	totalPaid = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)))*numMonth;
+        	totalPaid = Math.round((totalPaid)*100.0)/100.0;
         }
         else {
             totalPaid = principal;
@@ -73,8 +73,9 @@ public class CarApp {
     //Calculate Remaining Balance
     public double remainingBalance() {
     	double remainingBalance;
-    	if ((this.moPayment * this.numMonth) != this.principal) {
-    		remainingBalance = this.principal - (this.moPayment * (this.numMonth - 1));
+    	if ((this.moPayment * this.numMonth) != this.totalPaid) {
+    		remainingBalance = this.totalPaid - (this.moPayment * (this.numMonth - 1));
+    		remainingBalance=Math.round((remainingBalance)*100.0)/100.0;
     	}
     	else {
     		remainingBalance = 0.0;
@@ -103,9 +104,6 @@ public class CarApp {
 	} 	 
 	public double getTotalIntPaid() { 
 		return totalIntPaid; 
-	}
-	public double getBalance() {
-		return remainingBalance;
 	}
 	public double getRemainingBalance() {
 		return remainingBalance;
