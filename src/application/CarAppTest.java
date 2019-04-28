@@ -9,16 +9,16 @@ public class CarAppTest {
     @org.junit.Test
     public void moPay() {
         double result = carapp.moPay();
-        assertEquals(965.18,result,0);
+        assertEquals(965.17,result,0);
     }
     @org.junit.Test
     public void totalPaid() {
         double result = carapp.totalPaid();
-        assertEquals(23164.32,result,0);
+        assertEquals(23164.09,result,0);
     }
     @org.junit.Test
     public void totalInterest() {
         double result = carapp.totalInterest();
-        assertEquals(1164.3199999999997,result,0);
+        assertEquals(1164.0900000000001,result,0);
     }
 }
