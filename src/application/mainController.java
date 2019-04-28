@@ -234,6 +234,7 @@ public class mainController {
 
 					);
 			moPaymentTF.setText(currencyFormat.format(CarAppObj.getMoPayment()));
+			System.out.println(CarAppObj.getMoPayment());
 			totalPaidTF.setText(currencyFormat.format(CarAppObj.getTotalPaid()));
 			intPaidTF.setText(currencyFormat.format(CarAppObj.getTotalIntPaid()));
 			//moPaymentCommentTF.setText(CarAppObj.getBalance());
