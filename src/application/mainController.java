@@ -231,13 +231,14 @@ public class mainController {
 					Integer.parseInt(tradeInPaymentTF.getText()),
 					Double.parseDouble(intRateTF.getText()),
 					Integer.parseInt(noMonthsTF.getText())
-
 					);
 			moPaymentTF.setText(currencyFormat.format(CarAppObj.getMoPayment()));
 			System.out.println(CarAppObj.getMoPayment());
 			totalPaidTF.setText(currencyFormat.format(CarAppObj.getTotalPaid()));
 			intPaidTF.setText(currencyFormat.format(CarAppObj.getTotalIntPaid()));
-			//moPaymentCommentTF.setText(CarAppObj.getBalance());
+			if (CarAppObj.getRemainingBalance() != 0.0) {
+				moPaymentTF.setText(moPaymentTF.getText() + " one payment " + CarAppObj.getRemainingBalance()); 
+			}
 		}	
 	}
 }

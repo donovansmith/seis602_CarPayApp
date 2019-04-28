@@ -107,4 +107,7 @@ public class CarApp {
 	public double getBalance() {
 		return remainingBalance;
 	}
+	public double getRemainingBalance() {
+		return remainingBalance;
+	}
 }
