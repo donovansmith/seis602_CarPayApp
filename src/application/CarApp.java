@@ -12,7 +12,7 @@ public class CarApp {
 	private double moPayment;
 	private double totalPaid;
 	private double totalIntPaid;
-	private String output;
+	private double remainingBalance;
 	
 	public CarApp(int carPrice, int downPayment, double interestRate, int numMonth) {
 		this.carPrice=carPrice;
@@ -22,9 +22,10 @@ public class CarApp {
 		this.numMonth=numMonth;
 		
 		this.principal=carPrice-downPayment;
-		this.moPayment=moPay();
 		this.totalPaid=totalPaid();
-		this.totalIntPaid=totalInterest();		
+		this.moPayment=moPay();
+		this.totalIntPaid=totalInterest();
+		this.remainingBalance=remainingBalance();
 	}
 		
 	//Victor
@@ -34,11 +35,11 @@ public class CarApp {
 		
 		if (interestRateAPR != 0) {
 			moPayment = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
-			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
+			moPayment = Math.round((moPayment)*100.0)/100.0;
 		}
 		else if (principal%numMonth != 0){
 			moPayment = principal/numMonth;
-			moPayment = Math.round((moPayment+.005)*100.0)/100.0;
+			moPayment = Math.round((moPayment)*100.0)/100.0;
 		}
 		else {
 			moPayment = principal/numMonth;
@@ -52,7 +53,8 @@ public class CarApp {
     public double totalPaid(){ //Total Paid doesn't take into effect trade in value
         double totalPaid = 0.0;
         if (interestRateAPR !=0) {
-            totalPaid = moPayment*numMonth;
+        	totalPaid = ((interestRateAPR*principal)/(1-Math.pow((1+interestRateAPR),-numMonth)));
+        	totalPaid = Math.round((moPayment+.005)*100.0)/100.0;
         }
         else {
             totalPaid = principal;
@@ -66,19 +68,18 @@ public class CarApp {
     public double totalInterest() {
     		return this.totalPaid - this.principal;
     }
+    
     //Vic
     //Calculate Remaining Balance
-    public String Payment() {
-    	double balance;
-    	String output;
-    	if ((this.moPayment * this.numMonth) > this.principal) {
-    		balance = this.principal - (this.moPayment * (this.numMonth - 1)); 
-    		output = (numMonth - 1) + " payments of " + moPayment + " and 1 payment of " + balance;
+    public double remainingBalance() {
+    	double remainingBalance;
+    	if ((this.moPayment * this.numMonth) != this.principal) {
+    		remainingBalance = this.principal - (this.moPayment * (this.numMonth - 1));
     	}
     	else {
-    		output = (numMonth) + " payments of " + moPayment;
+    		remainingBalance = 0.0;
     	}
-    	return output;
+    	return remainingBalance;
     }
     
     //Getters
@@ -103,7 +104,7 @@ public class CarApp {
 	public double getTotalIntPaid() { 
 		return totalIntPaid; 
 	}
-	public String getBalance() {
-		return output;
+	public double getBalance() {
+		return remainingBalance;
 	}
 }
